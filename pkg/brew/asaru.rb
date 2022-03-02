@@ -7,19 +7,16 @@
 #   brew untap thekuwayama/asaru
 
 class Asaru < Formula
-  version 'v0.3.3'
+  version 'v0.3.4'
   desc 'Asana Tasks Search CLI'
   homepage 'https://github.com/thekuwayama/asaru'
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/thekuwayama/asaru/releases/download/#{version}/asaru-#{version}-x86_64-apple-darwin.tar.gz"
-    sha256 '5ff07ae0c796c732e1b7ae042dc4c2d07e6f9ed42c994111f8cb43c495e6592a'
+    sha256 'd831a35fad1f95882bd8c60df31fbf00c03a9d737a18279760bbb77bc37f042b'
   elsif OS.mac? && Hardware::CPU.arm?
     url "https://github.com/thekuwayama/asaru/releases/download/#{version}/asaru-#{version}-aarch64-apple-darwin.tar.gz"
-    sha256 '62c769f57cbc3a1f6fa85d2b602b78868d0fd31a0f336fc72303179f48dad0f7'
-  else
-    warn '** not support **'
-    exit 1
+    sha256 '1f999813b907a588d7964ca632b031dba0e80e2f0b9c3220da6b18bd86f3fd6c'
   end
 
   def install
